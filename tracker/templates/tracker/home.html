@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{% static 'tracker/css/style.css' %}">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="card">
+        <h1>💰 Expense Tracker</h1>
+
+        <form id="expense-form" class="form">
+            <input type="text" id="title" placeholder="Expense Title" required>
+            <input type="number" id="amount" placeholder="Amount ₹" required>
+            <button type="submit">➕ Add</button>
+        </form>
+
+        <div class="summary">
+            <h2>Total Balance</h2>
+            <p>₹<span id="total">0</span></p>
+        </div>
+
+        <ul id="expense-list" class="list"></ul>
+    </div>
+</div>
+
+<script src="{% static 'tracker/js/script.js' %}"></script>
+
+</body>
+</html>

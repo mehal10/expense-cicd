@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse("CI/CD Pipeline Working 🚀")
+    return render(request, 'tracker/home.html')
